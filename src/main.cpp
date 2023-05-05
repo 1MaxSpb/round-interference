@@ -102,7 +102,6 @@ Vector2 ball3(Vector2 b3, int k3x, int k3y) {
 void
 main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, int k2y, int k3x, int k3y, Vector2 b1,
       Vector2 b2, Vector2 b3) {
-<<<<<<< HEAD
     while (!WindowShouldClose() && IsGameActive == true) {
         BeginDrawing();
         ClearBackground(YELLOW);
@@ -112,7 +111,6 @@ main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, i
         DrawCircle(b1.x, b1.y, 10, GREEN);
         DrawCircle(b2.x, b2.y, 30, GREEN);
         DrawCircle(b3.x, b3.y, 30, GREEN);
-<<<<<<< HEAD
 
         b1 = ball1(b1, k1x, k1y);
         b2 = ball1(b2, k2x, k2y);
