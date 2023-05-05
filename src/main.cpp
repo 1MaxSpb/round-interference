@@ -52,11 +52,8 @@ Vector2 ball1(Vector2 b1, int k1x, int k1y) {
             k1y = k1y * -1;
         }
     }
-<<<<<<< HEAD
     b1.x = b1.x + 2 * k1x;
     b1.y = b1.y + 2 * k1y;
-=======
->>>>>>> origin/main
 
     return b1;
 }
@@ -76,11 +73,8 @@ Vector2 ball2(Vector2 b2, int k2x, int k2y) {
             k2y = k2y * -1;
         }
     }
-<<<<<<< HEAD
     b2.x = b2.x + 2 * k2x;
     b2.y = b2.y + 2 * k2y;
-=======
->>>>>>> origin/main
 
     return b2;
 }
@@ -100,12 +94,8 @@ Vector2 ball3(Vector2 b3, int k3x, int k3y) {
             k3y = k3y * -1;
         }
     }
-<<<<<<< HEAD
     b3.x = b3.x + 2 * k3x;
     b3.y = b3.y + 2 * k3y;
-=======
-
->>>>>>> origin/main
     return b3;
 }
 
@@ -113,9 +103,6 @@ void
 main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, int k2y, int k3x, int k3y, Vector2 b1,
       Vector2 b2, Vector2 b3) {
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/main
     while (!WindowShouldClose() && IsGameActive == true) {
         BeginDrawing();
         ClearBackground(YELLOW);
@@ -130,8 +117,6 @@ main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, i
         b1 = ball1(b1, k1x, k1y);
         b2 = ball1(b2, k2x, k2y);
         b3 = ball1(b3, k3x, k3y);
-=======
->>>>>>> origin/main
         player = dvizh(player, speed);
 
         EndDrawing();
