@@ -38,17 +38,17 @@ Vector2 dvizh(Vector2 player, int speed) {
 }
 
 Vector2 ball1(Vector2 b1, int k1x, int k1y) {
-    if (b1.x > 1907) {
+    if (b1.x > 1887) {
         k1x = k1x * -1;
     } else {
-        if (b1.x < 10) {
+        if (b1.x < 30) {
             k1x = k1x * -1;
         }
     }
-    if (b1.y > 918) {
+    if (b1.y > 897) {
         k1y = k1y * -1;
     } else {
-        if (b1.y < 110) {
+        if (b1.y < 140) {
             k1y = k1y * -1;
         }
     }
@@ -57,48 +57,6 @@ Vector2 ball1(Vector2 b1, int k1x, int k1y) {
 
     return b1;
 }
-
-Vector2 ball2(Vector2 b2, int k2x, int k2y) {
-    if (b2.x > 1907) {
-        k2x = k2x * -1;
-    } else {
-        if (b2.x < 10) {
-            k2x = k2x * -1;
-        }
-    }
-    if (b2.y > 918) {
-        k2y = k2y * -1;
-    } else {
-        if (b2.y < 110) {
-            k2y = k2y * -1;
-        }
-    }
-    b2.x = b2.x + 2 * k2x;
-    b2.y = b2.y + 2 * k2y;
-
-    return b2;
-}
-
-Vector2 ball3(Vector2 b3, int k3x, int k3y) {
-    if (b3.x > 1907) {
-        k3x = k3x * -1;
-    } else {
-        if (b3.x < 10) {
-            k3x = k3x * -1;
-        }
-    }
-    if (b3.y > 918) {
-        k3y = k3y * -1;
-    } else {
-        if (b3.y < 110) {
-            k3y = k3y * -1;
-        }
-    }
-    b3.x = b3.x + 2 * k3x;
-    b3.y = b3.y + 2 * k3y;
-    return b3;
-}
-
 void
 main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, int k2y, int k3x, int k3y, Vector2 b1,
       Vector2 b2, Vector2 b3) {
@@ -108,7 +66,7 @@ main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, i
         DrawRectangle(0, 928, 1917, 100, GRAY);
         DrawRectangle(0, 0, 1917, 100, GRAY);
         DrawCircle(player.x, player.y, 30, RED);
-        DrawCircle(b1.x, b1.y, 10, GREEN);
+        DrawCircle(b1.x, b1.y, 30, GREEN);
         DrawCircle(b2.x, b2.y, 30, GREEN);
         DrawCircle(b3.x, b3.y, 30, GREEN);
 
