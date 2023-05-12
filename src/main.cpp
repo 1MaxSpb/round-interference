@@ -152,6 +152,7 @@ main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, i
 
 
 
+
         b1 = ball1(b1, k1x, k1y);
         b2 = ball1(b2, k2x, k2y);
         b3 = ball1(b3, k3x, k3y);
