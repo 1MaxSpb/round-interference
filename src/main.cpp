@@ -7,8 +7,22 @@
 #include "extras/raygui.h"
 
 using namespace std;
-
-
+int getRandomNumber(int min, int max)
+{
+    static constexpr double fraction { 1.0 / (RAND_MAX + 1.0) };
+    return min + static_cast<int>((max - min + 1) * (std::rand() * fraction));
+}
+int t = 0;
+int bonus = GetRandomValue(150, 900);
+int bonus1 = GetRandomValue(900, 100);
+int bonus11 = GetRandomValue(150, 900);
+int bonus12 = GetRandomValue(900, 100);
+int bonus13 = GetRandomValue(150, 900);
+int bonus14 = GetRandomValue(900, 100);
+int bonus15 = GetRandomValue(150, 900);
+int bonus16 = GetRandomValue(900, 100);
+int bonus17 = GetRandomValue(150, 900);
+int bonus18 = GetRandomValue(900, 100);
 Vector2 dvizh(Vector2 player, int speed) {
     if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A)) {
         player.x = player.x - speed * 1.2;
@@ -62,6 +76,7 @@ main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, i
       Vector2 b2, Vector2 b3) {
     while (!WindowShouldClose() && IsGameActive == true) {
         BeginDrawing();
+
         ClearBackground(YELLOW);
         DrawRectangle(0, 928, 1917, 100, GRAY);
         DrawRectangle(0, 0, 1917, 100, GRAY);
@@ -69,12 +84,37 @@ main2(int speed, Vector2 player, bool IsGameActive, int k1x, int k1y, int k2x, i
         DrawCircle(b1.x, b1.y, 30, GREEN);
         DrawCircle(b2.x, b2.y, 30, GREEN);
         DrawCircle(b3.x, b3.y, 30, GREEN);
+        if (t == 600) {
+            bonus = GetRandomValue(150, 900);
+            bonus1 = GetRandomValue(900, 100);
+            bonus11 = GetRandomValue(150, 900);
+            bonus12 = GetRandomValue(900, 100);
+            bonus13 = GetRandomValue(150, 900);
+            bonus14 = GetRandomValue(900, 100);
+            bonus15 = GetRandomValue(150, 900);
+            bonus16 = GetRandomValue(900, 100);
+            bonus17 = GetRandomValue(150, 900);
+            bonus18 = GetRandomValue(900, 100);
+
+
+
+
+        t= 0;}
+
+        DrawCircle(bonus, bonus1, 30, BLUE);
+        DrawCircle(bonus11, bonus12, 30, BLUE);
+        DrawCircle(bonus13, bonus14, 30, BLUE);
+        DrawCircle(bonus15, bonus16, 30, BLUE);
+        DrawCircle(bonus17, bonus18, 30, BLUE);
+
+
+
 
         b1 = ball1(b1, k1x, k1y);
         b2 = ball1(b2, k2x, k2y);
         b3 = ball1(b3, k3x, k3y);
         player = dvizh(player, speed);
-
+        t++;
         EndDrawing();
 
     }
